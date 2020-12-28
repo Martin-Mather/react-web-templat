@@ -26,8 +26,6 @@ import Contact from './contact/contact.js';
 import Post from './post/post.js';
 
 
-
-
 class App extends React.Component {
     render() {
 
