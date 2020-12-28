@@ -1,14 +1,9 @@
 import React from 'react';
 import {
     BrowserRouter as Router,
-    HashRouter,
     Switch,
     Route,
-    Link,
     NavLink,
-    Redirect,
-    useRouteMatch,
-    useParams
 } from "react-router-dom";
 
 /*
@@ -26,11 +21,12 @@ import Contact from './contact/contact.js';
 import Post from './post/post.js';
 
 
+
 class App extends React.Component {
     render() {
 
         return (
-            <HashRouter>
+            <Router>
                 <div>
                     <nav className={'top-nav'}>
                         <ul>
@@ -70,7 +66,7 @@ class App extends React.Component {
                         </Route>
                     </Switch>
                 </div>
-            </HashRouter>
+            </Router>
         );
     }
 }
