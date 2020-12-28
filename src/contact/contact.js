@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+
 function Contact() {
 
     /*
@@ -22,6 +23,7 @@ function Contact() {
             title: 'React',
             url: 'https://reactjs.org/',
             author: 'Jordan Walke',
+
             num_comments: 3,
             points: 4,
             objectID: 0,
@@ -51,7 +53,6 @@ function Contact() {
     );
 
 
-
     setTimeout(()=>{
         dispatchStories({
             type: 'SET_STORIES',
@@ -72,13 +73,15 @@ function Contact() {
 const List = props =>
     props.list.map(item => (
         <div key={item.objectID}>
-      <span>
-        <a href={item.url}>{item.title}</a>
-      </span>
+          <span>
+            <a href={item.url}>{item.title}</a>
+          </span>
             <span>{item.author}</span>
             <span>{item.num_comments}</span>
             <span>{item.points}</span>
         </div>
- ));
+    ));
+
+
 
 export default Contact;
