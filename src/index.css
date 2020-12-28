@@ -70,14 +70,45 @@ h1 {
   font-weight: 600;
 }
 
+h3 {
+  font-weight: normal;
+  font-size: 30px;
+  margin: 0 0 20px 0;
+}
+
 .two-cols-l {
   display: flex;
 }
 .two-cols-l > div {
-  width: 100%;
+  width: 70%;
 }
 .two-cols-l aside {
   width: 30%;
-  background-color: #ebebeb;
+  padding-left: 3%;
+  border-left: 1px solid #ccc;
+}
+
+/* sidebar */
+
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 6%;
+
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+}
+.sidebar-nav  a {
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.sidebar-nav a.active {
+  color: #7d9fef;
+}
+.sidebar-nav a:hover {
+  color: #ccc;
 }
 

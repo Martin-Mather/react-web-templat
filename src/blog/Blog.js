@@ -1,5 +1,6 @@
 import React from 'react';
 import BlogSidebar from './BlogSidebar';
+import BlogPostsList from './BlogPostsList';
 
 import {
     Switch,
@@ -14,66 +15,36 @@ function Blog() {
 
     return (
         <div>
-            <header className={'page-head'}><h1>Blog</h1></header>
             <Switch>
                 <Route exact path={path}>
-                    <PostsListView />
+                    <BlogListView />
                 </Route>
                 <Route path={`${path}/:category`}>
-                    <PostsListView />
+                    <BlogListView />
                 </Route>
             </Switch>
         </div>
     );
 }
 
-function PostsListView() {
+function BlogListView() {
 
     let { category } = useParams();
 
     //todo: jesli taka kategoria nie istnieje - powinna byc strona 404???
 
     return (
-        <div className={'width-holder'}>
-            <h3>Post List</h3>
-            <div className={'two-cols-l'}>
-                <PostsList category={category} />
-                <BlogSidebar category={category} />
+        <div>
+            <header className={'page-head'}><h1>Blog {category}</h1></header>
+            <div className={'width-holder'}>
+                <div className={'two-cols-l'}>
+                    <BlogPostsList category={category} />
+                    <BlogSidebar category={category} />
+                </div>
             </div>
         </div>
     );
 }
-
-class PostsList extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.category = this.props.category;
-    }
-
-    render() {
-
-        if(this.category){
-
-            return(
-                <div>
-                    <b>Category: {this.category}</b>
-                    <p>Here is the list of category posts <b>{this.category}</b> </p>
-                </div>
-            );
-
-        }else {
-
-            return(
-                <div>
-                    <p>Here is the list of all posts</p>
-                </div>
-            );
-        }
-
-    }
-}
-
 
 export default Blog;
 
