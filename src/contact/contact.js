@@ -64,8 +64,10 @@ function Contact() {
     return (
         <div>
             <header className={'page-head'}><h1>Contact</h1></header>
-            <p>Contact page content</p>
-            <List list={stories} />
+            <div className={'width-holder'}>
+                <p>Contact page content</p>
+                <List list={stories} />
+            </div>
         </div>
     );
 }

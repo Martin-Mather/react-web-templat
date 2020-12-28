@@ -6,7 +6,9 @@ function About() {
     return (
         <div>
             <header className={'page-head'}><h1>About</h1></header>
-            <p>About page content</p>
+            <div className={'width-holder'}>
+                <p>About page content</p>
+            </div>
         </div>
         );
 }

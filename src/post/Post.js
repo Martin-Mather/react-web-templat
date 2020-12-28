@@ -1,13 +1,7 @@
 import React from 'react';
+import BlogSidebar from '../blog/BlogSidebar';
+
 import {
-    BrowserRouter as Router,
-    HashRouter,
-    Switch,
-    Route,
-    Link,
-    NavLink,
-    Redirect,
-    useRouteMatch,
     useParams
 } from "react-router-dom";
 
@@ -16,14 +10,16 @@ function Post() {
 
     let {category, slug} = useParams();
 
-    //todo: sidebar dodac z nawigacja zaznaczajca sie
-    //todo: strona 404 gdy nie ma postu?
-
     return (
 
         <div>
             <header className={'page-head'}><h1>Post Title</h1></header>
-            <PostSingle category={category} slug={slug} />
+            <div className={'width-holder'}>
+                <div className={'two-cols-l '}>
+                    <PostSingle category={category} slug={slug} />
+                    <BlogSidebar category={category} />
+                </div>
+            </div>
         </div>
     );
 

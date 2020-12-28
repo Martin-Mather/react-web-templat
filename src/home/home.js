@@ -16,7 +16,9 @@ class HomeTemplate extends React.Component {
         return (
             <div>
                 <header className={'page-head'}><h1>Home</h1></header>
+                <div className={'width-holder'}>
                 <p>Hi I'm nice fgfg and empty yet home template</p>
+                </div>
             </div>
         );
     }

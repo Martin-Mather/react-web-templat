@@ -1,26 +1,17 @@
 import React from 'react';
+import BlogSidebar from './BlogSidebar';
+
 import {
-    BrowserRouter as Router,
-    HashRouter,
     Switch,
     Route,
-    Link,
-    NavLink,
-    Redirect,
     useRouteMatch,
     useParams
 } from "react-router-dom";
 
 function Blog() {
 
-    let { path, url } = useRouteMatch();
-    /*
-      jakies info -  pobierany z api - model page
-      tu beda posty pobierane wedlug daty + paginacja - model blog
-     * z prawej kategorie
-     * kategoria bedzie filtrowac posty
-     * bedzie tez odzielna templatka dla postu
-     */
+    let { path } = useRouteMatch();
+
     return (
         <div>
             <header className={'page-head'}><h1>Blog</h1></header>
@@ -40,21 +31,20 @@ function PostsListView() {
 
     let { category } = useParams();
 
-    //todo: sidebar dodac z nawigacja zaznaczajca sie
+    //todo: jesli taka kategoria nie istnieje - powinna byc strona 404???
 
     return (
-        <div>
+        <div className={'width-holder'}>
             <h3>Post List</h3>
-            <PostsList category={category} />
+            <div className={'two-cols-l'}>
+                <PostsList category={category} />
+                <BlogSidebar category={category} />
+            </div>
         </div>
     );
 }
 
 class PostsList extends React.Component {
-
-    //todo: jesli jest wybrana categoria filtruj posty
-    //todo: jesli nie jest wyswietl wszytskie
-    //todo: jesli taka kategoria nie istnieje - 404???
 
     constructor(props) {
         super(props);
@@ -83,7 +73,6 @@ class PostsList extends React.Component {
 
     }
 }
-
 
 
 export default Blog;

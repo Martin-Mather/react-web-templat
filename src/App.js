@@ -7,19 +7,24 @@ import {
 } from "react-router-dom";
 
 /*
- * todo POZNIEJ - podpiac API axios - pobierajac teksty informcyjne na stony
- * todo Pozniej - podpiac api axios i zrobic Blog
+   todo: blog sidebar nawigacja zaznaczajca sie
+   todo: blog posts lists + podpiecie pod filter sidebar/categorie
+   todo: Blog dostaje suffix category name
+   todo: paginacja
+
+ * todo Pozniej - zrobic Blog lista + single na obiekcie danych.
+ * todo POZNIEJ - texty na stony  na obiekcie danych
  * todo POZNIEJ - Contact
  * todo POZNIEJ - About
  * todo Pozniej Home
+ * todo: axios
  */
 
 import Home from './home/home.js';
-import Blog from './blog/blog.js';
+import Blog from './blog/Blog.js';
 import About from './about/about.js';
 import Contact from './contact/contact.js';
-import Post from './post/post.js';
-
+import Post from './post/Post.js';
 
 
 class App extends React.Component {
@@ -29,20 +34,22 @@ class App extends React.Component {
             <Router>
                 <div>
                     <nav className={'top-nav'}>
-                        <ul>
-                            <li>
-                                <NavLink exact to="/" activeClassName="active">Home</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/about" activeClassName="active">About</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/blog" activeClassName="active">Blog</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/contact" activeClassName="active">Contact</NavLink>
-                            </li>
-                        </ul>
+                        <div className={'width-holder'}>
+                            <ul>
+                                <li>
+                                    <NavLink exact to="/" activeClassName="active">Home</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/about" activeClassName="active">About</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/blog" activeClassName="active">Blog</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/contact" activeClassName="active">Contact</NavLink>
+                                </li>
+                            </ul>
+                        </div>
                     </nav>
 
                     <Switch>
