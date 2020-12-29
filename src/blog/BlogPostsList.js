@@ -44,18 +44,18 @@ function BlogPostsList({category}) {
 const List = props =>
     props.list.map(item => (
 
-            <div key={item.objectID} className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div className="col p-4 d-flex flex-column position-static">
-                    <strong className="d-inline-block mb-2 text-primary">World</strong>
-                    <h3 className="mb-0">{item.title}</h3>
-                    <div className="mb-1 text-muted">Nov 12</div>
-                    <p className="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a href={item.url} className="stretched-link">Continue reading</a>
-                </div>
-                <div className="col-auto d-none d-lg-block text-center">
-                    <svg className="bd-placeholder-img " width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                </div>
-            </div>
+        <article className="blog-post" key={item.objectID}>
+            <h2 className="blog-post-title">{item.title}</h2>
+            <p className="blog-post-meta">December 23, 2013 by <a href={item.url}>{item.author}</a></p>
+
+            <p>Cum sociis natoque penatibus et magnis <a href={item.url}>dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+            <blockquote>
+                <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </blockquote>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            <a href={item.url} >Continue reading</a>
+        </article>
 
 ));
 

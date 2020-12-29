@@ -15,22 +15,41 @@ $grid-breakpoints: (
   margin: auto;
 }
 
+.main-nav {
+  a {
+    color: #fff;
+    transition: color 0.3s;
+
+
+    &:hover {
+      color: rgba(#fff,0.7);
+    }
+  }
+  a.active {
+    color: gold;
+  }
+
+}
 
 
 .page-head {
-  padding: 30px 20px;
+  padding: 30px 20px 50px 20px;
   text-align: left;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   background-color: #fafafa;
+
+  p {
+    color: darken(#ccc,15%);
+  }
 }
 
 .page-head h1 {
   max-width: 1400px;
-  margin: 40px  auto;
+  margin: 40px auto 5px auto;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 600;
 }
 
@@ -52,9 +71,11 @@ h3 {
   border-left: 1px solid #ccc;
 }
 
+.breadcrumb {
+  margin-bottom: 30px;
+}
+
 /* sidebar */
-
-
 .sidebar-nav {
   display: flex;
   flex-direction: column;

@@ -11,7 +11,8 @@ import {
 
 /*
 
-   todo: dodac gallery/portfolio https://getbootstrap.com/docs/5.0/examples/album/
+   todo: fix active links
+   todo: dodac gallery/portfolio page https://getbootstrap.com/docs/5.0/examples/album/
    todo: podlaczyc breadcrumb
    todo: dodac krotkei description pod kazdym page header
    todo: blog loading ladniejsze
@@ -55,18 +56,18 @@ class App extends React.Component {
                                 </div>
                                 <div class="col-sm-4 offset-md-1 py-4">
                                     <h4 class="text-white">Menu</h4>
-                                    <ul class="list-unstyled">
+                                    <ul class="list-unstyled main-nav">
                                         <li>
-                                            <NavLink exact to="/" className={'text-white'} activeClassName="active">Home</NavLink>
+                                            <NavLink exact to="/"  activeClassName="active">Home</NavLink>
                                         </li>
                                         <li>
-                                            <NavLink to="/about" className={'text-white'} activeClassName="active">About</NavLink>
+                                            <NavLink to="/about"  activeClassName="active">About</NavLink>
                                         </li>
                                         <li>
-                                            <NavLink to="/blog" className={'text-white'} activeClassName="active">Blog</NavLink>
+                                            <NavLink to="/blog"  activeClassName="active">Our Blog</NavLink>
                                         </li>
                                         <li>
-                                            <NavLink to="/contact" className={'text-white'} activeClassName="active">Contact</NavLink>
+                                            <NavLink to="/contact"  activeClassName="active">Contact Us</NavLink>
                                         </li>
                                     </ul>
                                 </div>
