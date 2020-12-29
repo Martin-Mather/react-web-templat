@@ -35,13 +35,39 @@ function BlogListView() {
 
     return (
         <div>
-            <header className={'page-head'}><h1>Blog {category}</h1></header>
-            <div className={'width-holder'}>
-                <div className={'two-cols-l'}>
-                    <BlogPostsList category={category} />
-                    <BlogSidebar category={category} />
+            <header className={'page-head'}>
+                <div className={'container'}>
+                    <h1>Blog {category}</h1>
                 </div>
-            </div>
+            </header>
+
+            <main className={'container'}>
+                <div className={'row'}>
+                    <div className={'col-md-8'}>
+                        <BlogPostsList category={category} />
+
+                        <nav className={'py-3'} aria-label="...">
+                            <ul className="pagination">
+                                <li className="page-item disabled">
+                                    <a className="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                </li>
+                                <li className="page-item"><a class="page-link" href="#">1</a></li>
+                                <li className="page-item active" aria-current="page">
+                                    <a className="page-link" href="#">2</a>
+                                </li>
+                                <li className="page-item"><a className="page-link" href="#">3</a></li>
+                                <li className="page-item">
+                                    <a className="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                    <div className={'col-md-4'}>
+                        <BlogSidebar category={category} />
+                    </div>
+                </div>
+            </main>
         </div>
     );
 }

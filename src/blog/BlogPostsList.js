@@ -31,7 +31,6 @@ function BlogPostsList({category}) {
 
     return (
         <div>
-            {category}
             {stories.isError && <p>Something went wrong ...</p>}
             {stories.isLoading ? (
                 <p>Loading ...</p>
@@ -44,14 +43,20 @@ function BlogPostsList({category}) {
 
 const List = props =>
     props.list.map(item => (
-        <div key={item.objectID}>
-          <span>
-            <a href={item.url}>{item.title}</a>
-          </span>
-            <span>{item.author}</span>
-            <span>{item.num_comments}</span>
-            <span>{item.points}</span>
-        </div>
+
+            <div key={item.objectID} className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div className="col p-4 d-flex flex-column position-static">
+                    <strong className="d-inline-block mb-2 text-primary">World</strong>
+                    <h3 className="mb-0">{item.title}</h3>
+                    <div className="mb-1 text-muted">Nov 12</div>
+                    <p className="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                    <a href={item.url} className="stretched-link">Continue reading</a>
+                </div>
+                <div className="col-auto d-none d-lg-block text-center">
+                    <svg className="bd-placeholder-img " width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                </div>
+            </div>
+
 ));
 
 
@@ -62,7 +67,7 @@ const List = props =>
 const initialStories = [
     {
         title: 'React',
-        url: 'https://reactjs.org/',
+        url: '/#/blog/fasdf/dsf',
         author: 'Jordan Walke',
 
         num_comments: 3,
@@ -71,14 +76,14 @@ const initialStories = [
     },
     {
         title: 'Redux',
-        url: 'https://redux.js.org/',
+        url: '/#/blog/fasdf/dsf',
         author: 'Dan Abramov, Andrew Clark',
         num_comments: 2,
         points: 5,
         objectID: 1,
     },{
         title: 'Reduxghdfgh',
-        url: 'https://redux.js.org/',
+        url: '/#/blog/fasdf/dsf',
         author: 'Dan Abramov, Andrew Clark',
         num_comments: 5,
         points: 2,

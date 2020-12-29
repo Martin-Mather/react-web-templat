@@ -13,13 +13,21 @@ function Post() {
     return (
 
         <div>
-            <header className={'page-head'}><h1>Post Title</h1></header>
-            <div className={'width-holder'}>
-                <div className={'two-cols-l '}>
-                    <PostSingle category={category} slug={slug} />
-                    <BlogSidebar category={category} />
+            <header className={'page-head'}>
+                <div className={'container'}>
+                    <h1>Post Title</h1>
                 </div>
-            </div>
+            </header>
+            <main className={'container'}>
+                <div className={'row'}>
+                    <div className={'col-md-8'}>
+                        <PostSingle category={category} slug={slug} />
+                    </div>
+                    <div className={'col-md-4'}>
+                        <BlogSidebar category={category} />
+                    </div>
+                </div>
+            </main>
         </div>
     );
 

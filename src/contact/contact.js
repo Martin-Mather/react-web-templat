@@ -10,11 +10,17 @@ function Contact() {
 
 
     return (
+
         <div>
-            <header className={'page-head'}><h1>Contact</h1></header>
-            <div className={'width-holder'}>
+            <header className={'page-head'}>
+                <div className={'container'}>
+                    <h1>Contact</h1>
+                </div>
+            </header>
+            <main className={'container'}>
                 <p>Contact page content</p>
-            </div>
+            </main>
+
         </div>
     );
 }

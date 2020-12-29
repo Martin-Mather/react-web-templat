@@ -5,13 +5,19 @@ function About() {
       * */
     return (
         <div>
-            <header className={'page-head'}><h1>About</h1></header>
-            <div className={'width-holder'}>
+            <header className={'page-head'}>
+                <div className={'container'}>
+                    <h1>About</h1>
+                </div>
+            </header>
+            <main className={'container'}>
                 <p>About page content</p>
-            </div>
+            </main>
+
         </div>
         );
 }
+
 
 
 

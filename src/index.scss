@@ -1,0 +1,155 @@
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+.width-holder {
+  max-width: 1400px;
+  margin: auto;
+}
+
+
+
+.page-head {
+  padding: 30px 20px;
+  text-align: left;
+  margin-bottom: 50px;
+  background-color: #fafafa;
+}
+
+.page-head h1 {
+  max-width: 1400px;
+  margin: 40px  auto;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 30px;
+  margin: 0 0 20px 0;
+}
+
+.two-cols-l {
+  display: flex;
+}
+.two-cols-l > div {
+  width: 70%;
+}
+.two-cols-l aside {
+  width: 30%;
+  padding-left: 3%;
+  border-left: 1px solid #ccc;
+}
+
+/* sidebar */
+
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 6%;
+
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+}
+.sidebar-nav  a {
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.sidebar-nav a.active {
+  color: #7d9fef;
+}
+.sidebar-nav a:hover {
+  color: #ccc;
+}
+
+
+
+
+/*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  transform: rotate(30deg);
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 5px;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
+}
+
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+.blog-pagination > .btn {
+  border-radius: 2rem;
+}
+
+/*
+ * Blog posts
+ */
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-title {
+  margin-bottom: .25rem;
+  font-size: 2.5rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #727272;
+}
+
+
