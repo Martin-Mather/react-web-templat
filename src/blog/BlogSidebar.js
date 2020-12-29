@@ -43,9 +43,9 @@ class BlogSidebar extends React.Component {
                 <div class="p-4">
                     <h4 class="font-italic">Contact</h4>
                     <ol class="list-unstyled">
-                        <li><a href="#">Follow on Twitter</a></li>
-                        <li><a href="#">Like on Facebook</a></li>
-                        <li><a href="#">Email me</a></li>
+                        <li><a href="/">Follow on Twitter</a></li>
+                        <li><a href="/">Like on Facebook</a></li>
+                        <li><a href="/">Email me</a></li>
                     </ol>
                 </div>
 

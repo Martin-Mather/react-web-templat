@@ -4,7 +4,7 @@ import React from 'react';
 //===========================  COMPONENTS
 //===========================  COMPONENTS
 
-function BlogPostsList({category}) {
+const BlogPostsList = ({category}) => {
 
     //STATES HANDLER
     const [stories, dispatchStories] = React.useReducer(
