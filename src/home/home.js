@@ -27,6 +27,22 @@ class HomeTemplate extends React.Component {
                 <div className={'container'}>
                 <p>Hi I'm nice fgfg and empty yet home template</p>
                 </div>
+
+                <div className="container">
+                    About
+                </div>
+
+                <div className="container">
+                    Gallery
+                </div>
+
+                <div className="container">
+                    Blog
+                </div>
+                <div className="container">
+                    Contact
+                </div>
+
             </main>
         );
     }

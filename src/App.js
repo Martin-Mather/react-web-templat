@@ -20,12 +20,16 @@ import {
 
    todo: paginacja
 
+   todo: stwozyc model PAGES, posts etc symulujace API
+
  * todo Pozniej - zrobic Blog lista + single na obiekcie danych.
  * todo POZNIEJ - texty na stony  na obiekcie danych
  * todo POZNIEJ - Contact
  * todo POZNIEJ - About
  * todo Pozniej Home
  * todo: axios
+ *
+ * todo: footer
  */
 
 import Home from './home/home.js';
@@ -109,7 +113,6 @@ class App extends React.Component {
                 <div className="container pt-4">
                     <hr className="featurette-divider"/>
                 </div>
-
 
                 <footer className="text-muted py-5">
                     <div className="container">
