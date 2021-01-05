@@ -10,10 +10,20 @@ import {
 
 /*
 
-   todo: stwozyc pusty model PAGES, posts etc symulujace pobieranie z API promise
+   todo: stwozyc pusty model PAGES i POSTS symulujacy pobieranie z API.
+   tak samo jak bloglist jest zrobione na reducer
+   kazda stona bedzie miala uniwersalne
+   {id:1, type:page or category, title: fdasdf, description:fdasdfas, content:dsafasdfasd}
+    todo: dac page info tez menu gornym
+   todo: meta title i description zmieniac
+
+
+
+   todo: kazdy post podobnie model
+   {id:1, title: fdasdf, description:fdasdfas, content:dsafasdfasd, rating: 4.5, comments: {...}}
+
 
    todo: blog posts lists + podpiecie pod filter sidebar/categorie
-
    todo: breadrumb pownien pobierac post name i catrgory name zamiast slug
    todo: Blog - Kategoria - Nagłówek powinien pobierac category name zamiast slug.
 
