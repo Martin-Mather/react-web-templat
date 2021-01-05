@@ -1,4 +1,8 @@
+import Breadcrumbs from '../global/components/Breadcrumbs';
+
 const About = () => {
+
+
 
     return (
         <div>
@@ -10,13 +14,7 @@ const About = () => {
                 </div>
             </header>
             <main className={'container'}>
-                <nav aria-label="breadcrumb">
-                    <ol className="breadcrumb">
-                        <li className="breadcrumb-item"><a href="/">Home</a></li>
-                        <li className="breadcrumb-item"><a href="/">Library</a></li>
-                        <li className="breadcrumb-item active" aria-current="page">Data</li>
-                    </ol>
-                </nav>
+                <Breadcrumbs />
                 <p>About page content</p>
             </main>
 

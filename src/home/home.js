@@ -17,7 +17,7 @@ class HomeTemplate extends React.Component {
             <main>
                 <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
                     <div className="col-md-6 p-lg-5 mx-auto my-5">
-                        <h1 className="display-4 fw-normal">React JS Web Template</h1>
+                        <h1 className="display-4 fw-normal">Web Template (ReactJS)</h1>
                         <p className="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
                         <a className="btn btn-outline-secondary" href="/">Coming soon</a>
                     </div>

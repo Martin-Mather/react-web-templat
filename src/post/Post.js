@@ -1,9 +1,11 @@
 import React from 'react';
 import BlogSidebar from '../blog/BlogSidebar';
+import Breadcrumbs from '../global/components/Breadcrumbs';
 
 import {
     useParams
 } from "react-router-dom";
+
 
 
 const Post = () => {
@@ -19,13 +21,7 @@ const Post = () => {
                 </div>
             </header>
             <main className={'container'}>
-                <nav aria-label="breadcrumb">
-                    <ol className="breadcrumb">
-                        <li className="breadcrumb-item"><a href="/">Home</a></li>
-                        <li className="breadcrumb-item"><a href="/blog">Blog</a></li>
-                        <li className="breadcrumb-item active" aria-current="page">Data</li>
-                    </ol>
-                </nav>
+                <Breadcrumbs />
                 <div className={'row'}>
                     <div className={'col-md-8'}>
                         <PostSingle category={category} slug={slug} />

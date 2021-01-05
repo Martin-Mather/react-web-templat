@@ -10,23 +10,26 @@ import {
 
 /*
 
+   todo: stwozyc pusty model PAGES, posts etc symulujace pobieranie z API promise
+
+   todo: blog posts lists + podpiecie pod filter sidebar/categorie
+
+   todo: breadrumb pownien pobierac post name i catrgory name zamiast slug
+   todo: Blog - Kategoria - Nagłówek powinien pobierac category name zamiast slug.
+
+
+   todo: fix 404 page
    todo: fix active links
-   todo: dodac gallery/portfolio page https://getbootstrap.com/docs/5.0/examples/album/
-   todo: podlaczyc breadcrumb
    todo: dodac krotkei description pod kazdym page header
    todo: blog loading ladniejsze
-   todo: blog posts lists + podpiecie pod filter sidebar/categorie
-   todo: Blog dostaje suffix category name
    todo: pst w blogu powinien miec opcje lajka lub unlike oraz ilosc komentarzy
    tu opis jak przypinac handlery w funkacjach (https://www.educative.io/module/lesson/react-fundamentals/39VMDWKZzW9)
 
+   todo: dodac gallery/portfolio page https://getbootstrap.com/docs/5.0/examples/album/
    todo: paginacja
-
    todo: blog search dodac z prawej??- jescli jest cateory szuka w cateory - lub pokazywac pod spodem liste autocomplete
-
    todo: POST komentarze add remove if your sessionid
 
-   todo: stwozyc model PAGES, posts etc symulujace API
 
  * todo Pozniej - zrobic Blog lista + single na obiekcie danych.
  * todo POZNIEJ - texty na stony  na obiekcie danych
@@ -42,6 +45,7 @@ import Home from './home/home.js';
 import Blog from './blog/Blog.js';
 import About from './about/about.js';
 import Contact from './contact/contact.js';
+import Error404 from './404/error404.js';
 
 
 
@@ -82,7 +86,7 @@ const App = () => {
 
                         <Link exact to="/" className={'navbar-brand d-flex align-items-center'} activeClassName="active">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-                            <strong>Your Logo</strong>
+                            <strong>Logo</strong>
                         </Link>
 
 
@@ -129,19 +133,6 @@ const App = () => {
 }
 
 
-const Error404 = () => {
 
-    return (
-        <div>
-            <header className={'page-head'}><h1>404</h1></header>
-            <br/>
-            <h3>
-                We're sorry nothing has been found.
-            </h3>
-            <br/>
-
-        </div>
-    );
-}
 
 export default App;

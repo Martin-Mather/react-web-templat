@@ -2,6 +2,7 @@ import React from 'react';
 import BlogSidebar from './BlogSidebar';
 import BlogPostsList from './BlogPostsList';
 import Post from '../post/Post.js';
+import Breadcrumbs from '../global/components/Breadcrumbs';
 
 import {
     Switch,
@@ -48,13 +49,7 @@ const BlogListView = () => {
 
             <main className={'container'}>
 
-                <nav aria-label="breadcrumb">
-                    <ol className="breadcrumb">
-                        <li className="breadcrumb-item"><a href="/">Home</a></li>
-                        <li className="breadcrumb-item"><a href="/">Library</a></li>
-                        <li className="breadcrumb-item active" aria-current="page">Data</li>
-                    </ol>
-                </nav>
+                <Breadcrumbs />
 
                 <div className={'row'}>
                     <div className={'col-md-8'}>
